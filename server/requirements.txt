@@ -1,0 +1,5 @@
+# 小笑肖 电脑端同步后端无第三方依赖。
+# 仅需 Python 3 + 标准库 + tkinter：
+#   - Windows：tkinter 随 Python 自带
+#   - Linux：   sudo apt install python3-tk
+#   - macOS：   brew install python-tk

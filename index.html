@@ -3,24 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小笑肖 · 在线生活工作台 — v0.0.1</title>
+<title>小笑肖 · 在线生活工作台</title>
 <style>
   :root{
     --bg:#0f1115; --card:#181b22; --fg:#e6e8ee; --muted:#9aa3b2;
-    --accent:#ff6b6b; --accent2:#4dd0e1; --line:#262b36;
+    --accent:#ff6b6b; --accent2:#4dd0e1; --ok:#5ad17a; --line:#262b36;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--fg);
-    font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
-    line-height:1.7}
-  .wrap{max-width:860px;margin:0 auto;padding:48px 20px 80px}
-  header{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px}
-  .badge{display:inline-block;background:var(--accent);color:#1a0000;font-weight:700;
-    padding:2px 10px;border-radius:999px;font-size:13px;letter-spacing:.5px}
-  h1{font-size:34px;margin:14px 0 6px}
+    font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+  .wrap{max-width:920px;margin:0 auto;padding:48px 20px 80px}
+  header{border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:32px}
+  .badge{display:inline-block;background:linear-gradient(135deg,var(--accent),#ff9f6b);color:#1a0000;
+    font-weight:700;padding:3px 12px;border-radius:999px;font-size:13px;letter-spacing:.5px}
+  h1{font-size:36px;margin:14px 0 6px}
   .sub{color:var(--muted);font-size:15px}
-  h2{font-size:20px;margin:36px 0 12px;border-left:3px solid var(--accent2);padding-left:10px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
+  h2{font-size:21px;margin:38px 0 14px;border-left:3px solid var(--accent2);padding-left:10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
   .mod{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
   .mod b{display:block;color:var(--accent2);font-size:14px;margin-bottom:2px}
   .mod span{color:var(--muted);font-size:12px}
@@ -30,23 +29,32 @@
   .card:hover{border-color:var(--accent);transform:translateY(-2px)}
   .card h3{margin:0 0 6px;font-size:16px}
   .card p{margin:0;color:var(--muted);font-size:13px}
-  code{background:#0b0d12;border:1px solid var(--line);padding:2px 6px;border-radius:6px;
-    font-size:13px;color:var(--accent2)}
-  footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
+  .timeline{margin:14px 0;border-left:2px solid var(--line);padding-left:20px}
+  .tl{position:relative;margin:0 0 20px}
+  .tl::before{content:"";position:absolute;left:-27px;top:4px;width:12px;height:12px;border-radius:50%;
+    background:var(--accent2);border:3px solid var(--bg)}
+  .tl .ver{font-weight:700;color:var(--accent2)}
+  .tl .date{color:var(--muted);font-size:12px}
+  .tl p{margin:4px 0 0;color:var(--fg);font-size:14px}
+  pre{background:#0b0d12;border:1px solid var(--line);padding:14px;border-radius:10px;overflow:auto;font-size:13px}
+  code{background:#0b0d12;border:1px solid var(--line);padding:2px 6px;border-radius:6px;font-size:13px;color:var(--accent2)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  th{background:var(--card);color:var(--accent2)}
   a{color:var(--accent2)}
+  footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <span class="badge">v0.0.1 · 第一个发布版本</span>
+    <span class="badge">最新发布 · v0.2.1</span>
     <h1>小笑肖 · 在线生活工作台</h1>
-    <div class="sub">自托管的双端（安卓 + 电脑）生活管理工作台 · 七大模块，数据存在你自己的设备上</div>
+    <div class="sub">一个自托管、双端同步的本地生活工作台 · 数据存你自己的设备，不依赖任何第三方云服务</div>
   </header>
 
-  <p>这是仓库的 <b>第一个发布版本（v0.0.1）</b>，是项目的早期源码快照。
-  后续重组版本请见 <a href="https://github.com/180lisilence/xiaoxiaoxiao/releases/tag/v0.2.1">v0.2.1</a>。
-  所有版本均通过 Git Tag 保留，可在仓库的 Releases / Tags 中查看完整历史。</p>
+  <p>把「今日概览 / 记账理财 / 习惯健康 / 减脂健身 / 日程统筹 / 待买清单 / 书影音收藏」七大模块收进一个 App。
+  电脑端就是服务器，手机按需连上来同步；每台设备一把私钥守门，没配对不给写。</p>
 
   <h2>七大模块</h2>
   <div class="grid">
@@ -59,30 +67,63 @@
     <div class="mod"><b>书影音收藏</b><span>媒体库</span></div>
   </div>
 
-  <h2>本版本入口</h2>
+  <h2>版本历史</h2>
+  <div class="timeline">
+    <div class="tl">
+      <div class="ver">v0.0.1</div>
+      <div class="date">首个发布版本 · <a href="https://github.com/180lisilence/xiaoxiaoxiao/releases/tag/v0.0.1">查看发布</a> / <a href="https://github.com/180lisilence/xiaoxiaoxiao/tree/v0.0.1">查看代码</a></div>
+      <p>早期源码快照：网页端 <code>clone_work/build/</code>、CSV 数据、三端打包源码（android / desktop / local）。</p>
+    </div>
+    <div class="tl">
+      <div class="ver">v0.2.1</div>
+      <div class="date">当前版本（本仓库 <code>main</code> 与 Tag）· <a href="https://github.com/180lisilence/xiaoxiaoxiao/releases/tag/v0.2.1">查看发布</a></div>
+      <p>重组为清晰结构：<code>android/</code>（安卓端，含已构建 APK）+ <code>server/</code>（电脑端同步后端），
+      去掉分散的桌面/本地双套打包，统一为一套双端同步方案。</p>
+    </div>
+  </div>
+
+  <h2>仓库结构（v0.2.1）</h2>
+  <table>
+    <tr><th>路径</th><th>说明</th></tr>
+    <tr><td><code>android/</code></td><td>安卓端：原生壳 + WebView 桥接，数据存本机 SQLite，可离线。含 <code>xiaoxiaoxiao-4.0.2.apk</code> 可直接安装</td></tr>
+    <tr><td><code>server/</code></td><td>电脑端同步后端：HTTP + SQLite，含 <code>_web/index.html</code> 网页界面与三份配置指南</td></tr>
+    <tr><td><code>LICENSE</code></td><td>许可证</td></tr>
+    <tr><td><code>README.md</code></td><td>项目详细说明（结构 / 私钥机制 / 同步机制 / API / 数据库）</td></tr>
+  </table>
+
+  <h2>快速上手</h2>
   <div class="cards">
-    <a class="card" href="clone_work/build/xiaoxiaoxiao.html">
-      <h3>网页端工作台</h3><p>直接浏览器打开 clone_work/build/xiaoxiaoxiao.html</p>
+    <a class="card" href="server/_web/index.html">
+      <h3>电脑端网页界面</h3><p>打开 server/_web/index.html 预览工作台</p>
     </a>
-    <a class="card" href="clone_work/build/online.html">
-      <h3>在线版页面</h3><p>clone_work/build/online.html 预览</p>
+    <a class="card" href="android/xiaoxiaoxiao-4.0.2.apk">
+      <h3>下载安卓 APK</h3><p>android/xiaoxiaoxiao-4.0.2.apk（已构建）</p>
     </a>
-    <a class="card" href="clone_work/pack/android/">
-      <h3>安卓端源码</h3><p>AndroidManifest / assets / build.sh / Java 源码</p>
+    <a class="card" href="android/build.sh">
+      <h3>自行构建安卓端</h3><p>cd android &amp;&amp; bash build.sh（需 JDK21 + build-tools）</p>
     </a>
-    <a class="card" href="https://github.com/180lisilence/xiaoxiaoxiao/releases/tag/v0.2.1">
-      <h3>查看新版本 v0.2.1</h3><p>已统一为 android/ + server/ 结构</p>
+    <a class="card" href="server/server.py">
+      <h3>启动同步后端</h3><p>python server/server.py 起本地服务</p>
     </a>
   </div>
 
-  <h2>本地快速预览</h2>
-  <p>用任意静态服务器打开网页端，例如：</p>
-  <p><code>cd clone_work/build &amp;&amp; python -m http.server 8080</code><br>
-  然后访问 <code>http://localhost:8080/xiaoxiaoxiao.html</code></p>
+  <h2>本地预览（电脑端）</h2>
+  <pre>cd server
+pip install -r requirements.txt
+python server.py
+# 浏览器打开提示的本地地址</pre>
+
+  <h2>设计要点</h2>
+  <ul>
+    <li><b>本地优先</b>：断网照常记录，联网后自动补推离线队列。</li>
+    <li><b>双端同步</b>：手机 ↔ 电脑，增量拉取，每条记录带 <code>source</code>（pc / phone）互不覆盖。</li>
+    <li><b>私钥鉴权</b>：<code>X-Pair-Key</code> 头校验，私钥永不上网，仅首次配对时算一次哈希存本机。</li>
+    <li><b>可迁移</b>：电脑地址可改；即开即用、即关即停，不常驻系统服务。</li>
+  </ul>
 
   <footer>
-    源码仅供个人使用与学习 · 版本历史见 Git Tag <code>v0.0.1</code> / <code>v0.2.1</code><br>
-    GitHub: github.com/180lisilence/xiaoxiaoxiao
+    源码仅供个人使用与学习 · 完整版本历史见 Git Tag <code>v0.0.1</code> / <code>v0.2.1</code><br>
+    GitHub: <a href="https://github.com/180lisilence/xiaoxiaoxiao">github.com/180lisilence/xiaoxiaoxiao</a>
   </footer>
 </div>
 </body>

@@ -1,0 +1,35 @@
+# ---- 构建产物 ----
+android/build/
+android/dist/
+server/build/
+server/_tmptest/
+__pycache__/
+*.pyc
+*.pyo
+
+# ---- 签名密钥（绝不提交）----
+android/keystore.jks
+*.jks
+*.keystore
+
+# ---- 运行时数据（后端首次运行会自动生成）----
+_data/
+server/_data/
+*.db
+*.db-shm
+*.db-wal
+uploads/
+
+# ---- 工具/缓存目录 ----
+_cf/
+_authcase/
+_old/
+_shots/
+*.idsig
+
+# ---- 系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
