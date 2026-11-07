@@ -1,0 +1,77 @@
+{
+ "money": {
+  "title": "收支记录表",
+  "fields": {
+   "date": "日期",
+   "flow": "收支方向",
+   "cat": "分类",
+   "amount": "金额",
+   "note": "备注"
+  }
+ },
+ "habit": {
+  "title": "习惯打卡表",
+  "fields": {
+   "date": "日期",
+   "name": "习惯",
+   "value": "数值",
+   "mode": "打卡方式",
+   "target": "目标值",
+   "unit": "单位"
+  }
+ },
+ "plan": {
+  "title": "日程表",
+  "fields": {
+   "date": "日期",
+   "title": "内容",
+   "list": "类型",
+   "status": "状态",
+   "start": "开始时间",
+   "end": "结束时间",
+   "pri": "优先级",
+   "done": "完成"
+  }
+ },
+ "fitness": {
+  "title": "身体数据记录表",
+  "fields": {
+   "date": "日期",
+   "weight": "体重",
+   "fat": "体脂率",
+   "note": "备注"
+  }
+ },
+ "shopping": {
+  "title": "采购清单表",
+  "fields": {
+   "name": "物品名称",
+   "qty": "数量",
+   "price": "预估价格",
+   "bought": "是否已买",
+   "cat": "分类",
+   "note": "备注"
+  }
+ },
+ "media": {
+  "title": "书影音收藏表",
+  "fields": {
+   "title": "标题",
+   "type": "类型",
+   "status": "状态",
+   "rating": "评分",
+   "review": "短评",
+   "cover": "封面",
+   "doneDate": "完成日期"
+  }
+ },
+ "summary": {
+  "title": "今日概览参数表",
+  "fields": {
+   "key": "参数",
+   "value": "数值",
+   "unit": "单位",
+   "note": "备注"
+  }
+ }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小笑肖 · 在线生活工作台 — v0.0.1</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#181b22; --fg:#e6e8ee; --muted:#9aa3b2;
+    --accent:#ff6b6b; --accent2:#4dd0e1; --line:#262b36;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.7}
+  .wrap{max-width:860px;margin:0 auto;padding:48px 20px 80px}
+  header{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px}
+  .badge{display:inline-block;background:var(--accent);color:#1a0000;font-weight:700;
+    padding:2px 10px;border-radius:999px;font-size:13px;letter-spacing:.5px}
+  h1{font-size:34px;margin:14px 0 6px}
+  .sub{color:var(--muted);font-size:15px}
+  h2{font-size:20px;margin:36px 0 12px;border-left:3px solid var(--accent2);padding-left:10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
+  .mod{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .mod b{display:block;color:var(--accent2);font-size:14px;margin-bottom:2px}
+  .mod span{color:var(--muted);font-size:12px}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;
+    text-decoration:none;color:inherit;transition:.15s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card h3{margin:0 0 6px;font-size:16px}
+  .card p{margin:0;color:var(--muted);font-size:13px}
+  code{background:#0b0d12;border:1px solid var(--line);padding:2px 6px;border-radius:6px;
+    font-size:13px;color:var(--accent2)}
+  footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
+  a{color:var(--accent2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="badge">v0.0.1 · 第一个发布版本</span>
+    <h1>小笑肖 · 在线生活工作台</h1>
+    <div class="sub">自托管的双端（安卓 + 电脑）生活管理工作台 · 七大模块，数据存在你自己的设备上</div>
+  </header>
+
+  <p>这是仓库的 <b>第一个发布版本（v0.0.1）</b>，是项目的早期源码快照。
+  后续重组版本请见 <a href="https://github.com/180lisilence/xiaoxiaoxiao/releases/tag/v0.2.1">v0.2.1</a>。
+  所有版本均通过 Git Tag 保留，可在仓库的 Releases / Tags 中查看完整历史。</p>
+
+  <h2>七大模块</h2>
+  <div class="grid">
+    <div class="mod"><b>今日概览</b><span>一屏看全貌</span></div>
+    <div class="mod"><b>记账理财</b><span>收支与账户</span></div>
+    <div class="mod"><b>习惯健康</b><span>打卡追踪</span></div>
+    <div class="mod"><b>减脂健身</b><span>训练与体重</span></div>
+    <div class="mod"><b>日程统筹</b><span>计划安排</span></div>
+    <div class="mod"><b>待买清单</b><span>购物车</span></div>
+    <div class="mod"><b>书影音收藏</b><span>媒体库</span></div>
+  </div>
+
+  <h2>本版本入口</h2>
+  <div class="cards">
+    <a class="card" href="clone_work/build/xiaoxiaoxiao.html">
+      <h3>网页端工作台</h3><p>直接浏览器打开 clone_work/build/xiaoxiaoxiao.html</p>
+    </a>
+    <a class="card" href="clone_work/build/online.html">
+      <h3>在线版页面</h3><p>clone_work/build/online.html 预览</p>
+    </a>
+    <a class="card" href="clone_work/pack/android/">
+      <h3>安卓端源码</h3><p>AndroidManifest / assets / build.sh / Java 源码</p>
+    </a>
+    <a class="card" href="https://github.com/180lisilence/xiaoxiaoxiao/releases/tag/v0.2.1">
+      <h3>查看新版本 v0.2.1</h3><p>已统一为 android/ + server/ 结构</p>
+    </a>
+  </div>
+
+  <h2>本地快速预览</h2>
+  <p>用任意静态服务器打开网页端，例如：</p>
+  <p><code>cd clone_work/build &amp;&amp; python -m http.server 8080</code><br>
+  然后访问 <code>http://localhost:8080/xiaoxiaoxiao.html</code></p>
+
+  <footer>
+    源码仅供个人使用与学习 · 版本历史见 Git Tag <code>v0.0.1</code> / <code>v0.2.1</code><br>
+    GitHub: github.com/180lisilence/xiaoxiaoxiao
+  </footer>
+</div>
+</body>
+</html>
